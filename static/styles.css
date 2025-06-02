@@ -22,7 +22,7 @@ header {
 }
 
 header a {
-    color: #ffffff;
+    color: white;
     text-decoration: none;
     font-weight: bold;
     margin-left: 15px;
@@ -30,15 +30,14 @@ header a {
 }
 
 header a:hover {
-    color: #ffd700;
+    color: white;
 }
 
-/* MENU DE NAVEGAÇÃO*/
+/* MENU DE NAVEGAÇÃO */
 nav {
-    background: red;
+    background: transparent; /* sem cor de fundo */
     padding: 15px 0;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 nav ul {
@@ -58,7 +57,7 @@ nav ul li::after {
     display: block;
     height: 2px;
     width: 0%;
-    background: rgb(255, 255, 255);
+    background: white; /* linha de destaque branca */
     transition: width 0.3s;
     margin: 5px auto 0 auto;
 }
@@ -69,14 +68,15 @@ nav ul li:hover::after {
 
 nav ul li a {
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    color: white; /* cor do menu branca */
     font-weight: bold;
     font-size: 1.1rem;
-    transition: transform 0.2s;
+    transition: transform 0.2s, color 0.2s;
 }
 
 nav ul li a:hover {
     transform: scale(1.1);
+    color: white; /* permanece branca no hover */
 }
 
 /* TÍTULO DA PÁGINA DE LOGIN */
@@ -93,36 +93,28 @@ input, textarea {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 8px;
-    width: 100%;
-    margin-bottom: 15px;
+    width: 200px;
+    max-width: 100%;
     color: #0d0d80;
     outline: none;
     transition: border 0.3s ease;
-}
-
-input:focus, textarea:focus {
-    border-color: red;
+    display: inline-block;
 }
 
 /* TABELAS DE FORMULÁRIOS */
 table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
+    width: auto;
+    margin: 20px auto;
 }
 
-td {
-    padding: 10px;
-    font-size: 16px;
-}
-
-#tblLogin td, #tblPost td {
-    font-weight: bold;
-}
-
-#tblLogin tr td {
+#tblLogin tr td:first-child {
     text-align: right;
-    padding-left: 10px;
+    padding-right: 10px;
+    white-space: nowrap;
+}
+
+#tblLogin tr td:last-child {
+    text-align: left;
 }
 
 #tblPost tr td {
@@ -154,12 +146,13 @@ footer {
     bottom: 0;
     width: 100%;
     background-color: red;
-    color: white;
+    color: black;
     text-align: center;
     padding: 12px 0;
     font-size: 0.9rem;
 }
-a{
- font-size:large;
 
+/* LINKS GERAIS */
+a {
+    font-size: large;
 }
