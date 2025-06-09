@@ -2,11 +2,20 @@
 const express = require("express");
 const session = require("express-session");
 const sqlite3 = require("sqlite3");
+const xss = require("xss");
+
+//Função para evitar ataques xss de forma simples.
+function cleanData(userInput) {
+  return xss(userInput);
+}
+
 // const bodyparser = require("body-parser") //Até a versão 4 é necessario usar esse codigo
 
 const app = express(); //Armazena as chamadas e propriedades da biblioteca EXPRESS
 
 const PORT = 8000;
+
+
 
 //Conexão com o Banco de Dados
 const db = new sqlite3.Database("users.db");
@@ -53,7 +62,9 @@ app.get("/login", (req, res) => {
 app.post("/login", (req, res) => {
   console.log("POST /login");
   console.log(JSON.stringify(req.body));
-  const { username, password } = req.body;
+  //cleanData o xss "limpa" o que o futuro hacker por exemplo injetar de script malicioso
+  const username = cleanData(req.body.username);
+  const password = cleanData(req.body.password);
 
   const query = `SELECT * FROM users WHERE username=? AND password=?`;
 
@@ -90,7 +101,9 @@ app.get("/cadastro", (req, res) => {
 app.post("/cadastro", (req, res) => {
   console.log("POST /cadastro");
   console.log(JSON.stringify(req.body));
-  const { username, password } = req.body;
+
+  const username = cleanData(req.body.username);
+  const password = cleanData(req.body.password);
 
   const query1 = `SELECT * FROM users WHERE username=?`;
   const query2 = `INSERT INTO users (username, password) VALUES (? , ?)`;
@@ -177,7 +190,8 @@ app.post("/novo-post", (req, res) => {
   // Pegar dados da postagem: User ID, Titulo, Conteudo, Data da Postagem
   //req.session.username, req.session.id
   if (req.session.loggedin) {
-    const { title, content } = req.body;
+  const title = cleanData(req.body.username);
+  const content = cleanData(req.body.password);
     const query = `INSERT INTO posts (id_user, title, content, data_criacao) VALUES (?, ? , ?, ?)`;
     const data = new Date();
     const data_atual = data.toLocaleDateString();
