@@ -7,6 +7,7 @@
       <th>ID</th>
       <th>Username</th>
       <th>Senha</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -19,13 +20,18 @@
       <td><%= dados[i].id %></td>
       <td><%= dados[i].username %></td>
       <td><%= dados[i].password %></td>
+      <% if (dados[i].username != req.session.username) {%>
+      <td><a href="/removerusuario/<%= dados[i].id%>" onclick="return confirm('Tem Certeza Que Deseja Excluir o Usuario?')">Remover Usuario</a></td>
+      <% } else {%>
+        <td></td>
+      <% } %>
     </tr>
     <% } %>
   </tbody>
   <tfoot>
     <tr style="height: 40px; background-color:red; color: white;">
       
-        <td colspan="3">
+        <td colspan="4">
           <center>
             <b><%- `Qtd de Registros: ${i}`%></b>
             </center>

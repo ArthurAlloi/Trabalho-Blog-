@@ -173,6 +173,20 @@ app.get("/dashboard", (req, res) => {
   }
 });
 
+// Remove um Usuario (admin)
+app.get("/removerusuario/:id", (req, res) => {
+  if (req.session.adm) {
+    const id = req.params.id;
+    let query = "DELETE from users Where id = ?";
+    db.get(query, [id], (err, row) => {
+      if (err) throw err;
+      res.redirect("/dashboard");
+    });
+  } else {
+    res.redirect("/nao-permitido");
+  }
+});
+
 // Página para acesso não permitido (admin)
 app.get("/nao-permitido", (req, res) => {
   console.log("GET /nao-permitido");
