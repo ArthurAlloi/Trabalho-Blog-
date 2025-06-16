@@ -11,7 +11,7 @@
         <h1 id="h1Login">NOVA POSTAGEM</h1>
         <main>
             <form action="/novo-post" method="post" onsubmit="return confirm('Tem Certeza Que Deseja Criar um Novo Post?');" class="formItens">
-        <table id="tblPost">
+        <table>
             <tr>
                 <td>
                     Titulo:
@@ -37,13 +37,13 @@
             <tr>
                 <td><br></td>
                 <td>
-                    <textarea name="content" id="content" placeholder="Digite o conteudo da Postagem" rows="6" cols="45" required></textarea>
+                    <textarea name="content" id="content" placeholder="Digite o conteudo da Postagem" rows="6" cols="45" style="width: 400px;" required></textarea>
                 </td>
             </tr>
         </table>
         <br>
         <br>
-        <button type="submit" id="btnPost">POSTAR</button>
+        <button type="submit" id="btnPost" style="margin-bottom: 20px;">POSTAR</button>
             </form>
         </main>
     </center>

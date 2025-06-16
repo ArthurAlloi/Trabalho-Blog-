@@ -12,7 +12,7 @@
   <tbody>
     <% let i = 0; for (i = 0; i< dados.length; i++) {%>
     <% if (dados[i].username == req.session.username) {%>
-      <tr style="background-color: red; color: white;">
+      <tr style="background-color: #ffe5e5; color:white;">
     <%} else {%>
     <tr>
     <% }%>
@@ -23,9 +23,12 @@
     <% } %>
   </tbody>
   <tfoot>
-    <tr>
+    <tr style="height: 40px; background-color:red; color: white;">
+      
         <td colspan="3">
-            <%- `Qtd de Registros: ${i}`%>
+          <center>
+            <b><%- `Qtd de Registros: ${i}`%></b>
+            </center>
         </td>
     </tr>
   </tfoot>

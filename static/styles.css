@@ -7,15 +7,9 @@
 
 body {
     background-color: #f9f9f9;
-<<<<<<< HEAD
-    color: #333;
-    line-height: 1.6;
-    min-height: 100vh;
-=======
     min-height: 100vh;
     color: #333;
     line-height: 1.6;
->>>>>>> Thalita
 }
 
 /* HEADER (TOPO) */
@@ -66,7 +60,6 @@ nav ul li::after {
     background: white; /* linha de destaque branca */
     transition: width 0.3s;
     margin: 5px auto 0 auto;
-<<<<<<< HEAD
 }
 
 nav ul li:hover::after {
@@ -152,93 +145,6 @@ footer {
     position: sticky;
     top: 100vh;
     width: 100%;
-=======
-}
-
-nav ul li:hover::after {
-    width: 100%;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: white; /* cor do menu branca */
-    font-weight: bold;
-    font-size: 1.1rem;
-    transition: transform 0.2s, color 0.2s;
-}
-
-nav ul li a:hover {
-    transform: scale(1.1);
-    color: white; /* permanece branca no hover */
-}
-
-/* TÍTULO DA PÁGINA DE LOGIN */
-#h1Login {
-    font-size: 2.5rem;
-    margin: 30px auto;
-    text-align: center;
-    color: red;
-}
-
-/* CAMPOS DE FORMULÁRIO */
-input, textarea {
-    font-size: 16px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    width: 200px;
-    max-width: 100%;
-    color: #0d0d80;
-    outline: none;
-    transition: border 0.3s ease;
-    display: inline-block;
-}
-
-/* TABELAS DE FORMULÁRIOS */
-table {
-    width: auto;
-    margin: 20px auto;
-}
-
-#tblLogin tr td:first-child {
-    text-align: right;
-    padding-right: 10px;
-    white-space: nowrap;
-}
-
-#tblLogin tr td:last-child {
-    text-align: left;
-}
-
-#tblPost tr td {
-    text-align: left;
-    padding-left: 10px;
-}
-
-/* BOTÕES */
-button {
-    padding: 10px 20px;
-    border: none;
-    background-color: red;
-    color: white;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s;
-}
-
-button:hover {
-    background-color: #cc0000;
-    transform: scale(1.05);
-}
-
-/* RODAPÉ FIXO */
-footer {
-    position: sticky;
-    top: 100vh;
-    width: 100%;
->>>>>>> Thalita
     background-color: red;
     color: white;
     text-align: center;
@@ -246,22 +152,6 @@ footer {
     font-size: 0.9rem;
 }
 
-<<<<<<< HEAD
-#MainDash *{
-    border: 1px solid;
-    width: 900px;
-}
-
-#MainDash table{
-    text-align: center;
-    border: 3px solid;
-}
-
-/* LINKS GERAIS */
-a {
-    font-size: large;
-}
-=======
 /* LINKS GERAIS */
 a {
     font-size: large;
@@ -298,8 +188,14 @@ a {
     color: #333;
 }
 
-#tblPost tbody tr:hover, #tblUser tbody tr:hover {
+#tblPost tbody tr:hover{
     background-color: #ffe5e5; /* destaque suave ao passar o mouse */
     transition: background-color 0.3s ease; /* transição suave */
 }
->>>>>>> Thalita
+
+tfoot a{
+    font-size: 25px;
+    color: red;
+    text-decoration: none;
+    margin: 0 10px;
+}
