@@ -28,6 +28,7 @@ db.serialize(() => {
   );
 });
 
+//os cookies (mecanismo usado para armazenar dados no navegador do usuario)
 app.use(
   session({
     secret: "senhaforte",
@@ -35,6 +36,7 @@ app.use(
     saveUninitialized: true,
   })
 );
+
 
 app.use("/static", express.static(__dirname + "/static"));
 
@@ -243,6 +245,5 @@ app.use("/{*erro}", (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Servidor sendo excexutado na porta ${PORT}`);
-  console.log(__dirname + "\\static");
+  console.log(`Servidor sendo executado na porta ${PORT}`);
 });
