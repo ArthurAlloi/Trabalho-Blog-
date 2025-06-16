@@ -295,8 +295,8 @@ app.post("/novo-post", (req, res) => {
   // Pegar dados da postagem: User ID, Titulo, Conteudo, Data da Postagem
   //req.session.username, req.session.id
   if (req.session.loggedin) {
-  const title = cleanData(req.body.username);
-  const content = cleanData(req.body.password);
+  const title = cleanData(req.body.title);
+  const content = cleanData(req.body.content);
     const query = `INSERT INTO posts (id_user, title, content, data_criacao) VALUES (?, ? , ?, ?)`;
     const data = new Date();
     const data_atual = data.toLocaleDateString();

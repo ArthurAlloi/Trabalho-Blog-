@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <table>
   <thead>
     <tr>
@@ -7,6 +8,27 @@
       <th>Link do Post</th>
       <% if (req.session.adm) { %> 
       <th>Exluir Post</th>
+=======
+<table id="tblPost">
+    <thead>
+      <tr>
+        <th>ID_Usuario</th>
+        <th>Titulo</th>
+        <th>Conteudo</th>
+        <th>Data</th>
+        <th>Link do Post</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% let i = 0; for (i = 0; i< dados.length; i++) {%>
+      <tr>
+        <td><%= dados[i].id_user %></td>
+        <td><%= dados[i].title %></td>
+        <td><%= dados[i].content %></td>
+        <td><%= dados[i].data_criacao %></td>
+        <td><a href=/postCompleto/<%=dados[i].id%>>Post Completo</a></td>
+      </tr>
+>>>>>>> Thalita
       <% } %>
     </tr>
   </thead>
