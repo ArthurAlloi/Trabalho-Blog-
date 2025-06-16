@@ -6,18 +6,19 @@
 <body>
     <%- include("../partials/menu") %>
     <br>
-    
+    <%- console.log(JSON.stringify(dados)); %>
+    <a href="/postCompleto/<%= dados.id %>"><img src="../../static/voltar.png" width="40px" style="margin: 10px;"></a>
     <center>
-        <h1 id="h1Login">NOVA POSTAGEM</h1>
+        <h1 id="h1Login">POSTAGEM <%= dados.id %></h1>
         <main>
-            <form action="/novo-post" method="post" onsubmit="return confirm('Tem Certeza Que Deseja Criar um Novo Post?');" class="formItens">
+            <form action="/editarPost/<%= dados.id %>" method="post" onsubmit="return confirm('Tem Certeza Que Deseja Salvar as Alterações?');" class="formItens">
         <table id="tblPost">
             <tr>
                 <td>
                     Titulo:
                 </td>
                 <td>
-                    <input type="text" name="title" id=title" style="width: 400px;" placeholder="Digite o Titulo" required>
+                    <input type="text" name="title" id=title" style="width: 400px;" value="<%= dados.title %>" required>
                 </td>
             </tr>
             <tr>
@@ -37,13 +38,13 @@
             <tr>
                 <td><br></td>
                 <td>
-                    <textarea name="content" id="content" placeholder="Digite o conteudo da Postagem" rows="6" cols="45" required></textarea>
+                    <textarea name="content" id="content" rows="6" cols="45" required><%= dados.content %></textarea>
                 </td>
             </tr>
         </table>
         <br>
         <br>
-        <button type="submit" id="btnPost">POSTAR</button>
+        <button type="submit" id="btnPost">Salvar Alterações</button>
             </form>
         </main>
     </center>

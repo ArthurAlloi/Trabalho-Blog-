@@ -6,19 +6,25 @@
 <body>
     <%- include("../partials/menu") %>
     <br><br>
-    <a href="/posts"><img src="../../static/voltar.png" width="40px"/ style="margin: 10px;"></a>
+    <a href="/posts/1"><img src="../../static/voltar.png" width="40px"/ style="margin: 10px;"></a>
     <br><br>
     <center>
     <div>
         <%- console.log(JSON.stringify(dados)); %>
-        ID USUARIO: <%= dados[0].id_user %>
-        <br>
+        
         <h1><%= dados[0].title %></h1>
         <br>
         <label><%= dados[0].content %></label>
         <br>
         <br>
-        <label>Data: <%= dados[0].data_criacao %></label>
+        <b>Nome de Usuário:</b> <%= dados[0].username %>
+        <br>
+        <label><b>Data: </b> <%= dados[0].data_criacao %></label>
+        <br>
+        <br>
+        <% if (req.session.adm) { %> 
+            <a href=/editarPost/<%=dados[0].id %>><button>Editar Post</button></a>
+        <% } %>
     </div>
     </center>
     <%- include("../partials/footer") %>

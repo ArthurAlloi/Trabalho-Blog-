@@ -1,106 +1,155 @@
 * {
-    font-family: Arial;
-
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, Arial, sans-serif;
 }
 
 body {
-    margin: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
 }
 
+/* HEADER (TOPO) */
 header {
     background-color: red;
-    padding: 8px;
+    padding: 16px 32px;
     color: white;
-    max-width: 100%;
-    text-align: end;
+    text-align: right;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
+header a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 15px;
+    transition: color 0.3s ease;
+}
+
+header a:hover {
+    color: white;
+}
+
+/* MENU DE NAVEGAÇÃO */
 nav {
+    background: transparent; /* sem cor de fundo */
+    padding: 15px 0;
     text-align: center;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 35px;
+    display: inline-block;
+    margin: 0 25px;
+    position: relative;
 }
 
-header a {
-    color: #ffffff;
+nav ul li::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0%;
+    background: white; /* linha de destaque branca */
+    transition: width 0.3s;
+    margin: 5px auto 0 auto;
+}
+
+nav ul li:hover::after {
+    width: 100%;
+}
+
+nav ul li a {
     text-decoration: none;
+    color: white; /* cor do menu branca */
     font-weight: bold;
-    transition: color 0.3s;
-    margin-right: 10px;
+    font-size: 1.1rem;
+    transition: transform 0.2s, color 0.2s;
 }
 
-header a:hover {
-    color: #ffd700;
+nav ul li a:hover {
+    transform: scale(1.1);
+    color: white; /* permanece branca no hover */
 }
 
-#h1Login{
-    font-size: 40px;
-}
-
-input{
-    font-size: 17px;
-    color: #0d0d8077;
-}
-
-#tblLogin {
-    border-style: none;
-}
-
-#tblLogin td{
-    font-size: 18px;
-    font-weight: bolder;
-}
-
-#tblLogin tr td{
-    text-align: end;
-    padding-left: 10px;
-}
-
-textarea{
-    font-size: 17px;
-    color: #0d0d8077;
-}
-
-#tblPost {
-    border-style: none;
-}
-
-#tblPost td{
-    font-size: 18px;
-    font-weight: bolder;
-    text-align: start;
-}
-
-#tblPost tr td{
-    padding-left: 10px;
-}
-footer {
+/* TÍTULO DA PÁGINA DE LOGIN */
+#h1Login {
+    font-size: 2.5rem;
+    margin: 30px auto;
     text-align: center;
+    color: red;
+}
+
+/* CAMPOS DE FORMULÁRIO */
+input, textarea {
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 200px;
+    max-width: 100%;
+    color: #0d0d80;
+    outline: none;
+    transition: border 0.3s ease;
+    display: inline-block;
+}
+
+/* TABELAS DE FORMULÁRIOS */
+table {
+    width: auto;
+    margin: 20px auto;
+}
+
+#tblLogin tr td:first-child {
+    text-align: right;
+    padding-right: 10px;
+    white-space: nowrap;
+}
+
+#tblLogin tr td:last-child {
+    text-align: left;
+}
+
+#tblPost tr td {
+    text-align: left;
+    padding-left: 10px;
+}
+
+/* BOTÕES */
+button {
+    padding: 10px 20px;
+    border: none;
     background-color: red;
     color: white;
-    padding: 5px 0;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+button:hover {
+    background-color: #cc0000;
+    transform: scale(1.05);
+}
+
+/* RODAPÉ FIXO */
+footer {
+    position: sticky;
+    top: 100vh;
     width: 100%;
-    bottom: 0;
-    position: fixed;
+    background-color: red;
+    color: white;
     text-align: center;
-}
-
-#cadastrar{
-    padding: 10px;
-    font-size: 14px;
-}
-
-#VoltarLogin{
-    padding: 10px;
-    font-size: 14px; 
+    padding: 12px 0;
+    font-size: 0.9rem;
 }
 
 #MainDash *{
@@ -113,23 +162,7 @@ footer {
     border: 3px solid;
 }
 
-button{ 
-    border: none;
-    padding: 15px;
-    font-size: 12px;
-    font-weight: bold;
-    background-color: red;
-    color: white;
-    border-radius: 5px;
-}
-
-button:hover {
-    cursor: pointer;
-    background-color: rgb(182, 6, 6);
-}
-
-#text{
-    text-align: justify;
-    margin: 30px;
-    line-height: 25px;
+/* LINKS GERAIS */
+a {
+    font-size: large;
 }

@@ -1,22 +1,67 @@
 <table>
-    <thead>
-      <tr>
-        <th>ID_Usuario</th>
-        <th>Titulo</th>
-        <th>Conteudo</th>
-        <th>Data</th>
-        <th>Link do Post</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% let i = 0; for (i = 0; i< dados.length; i++) {%>
-      <tr>
-        <td><%= dados[i].id_user %></td>
-        <td><%= dados[i].title %></td>
-        <td><%= dados[i].content %></td>
-        <td><%= dados[i].data_criacao %></td>
-        <td><a href=/postCompleto/<%=dados[i].id%>>Post Completo</a></td>
-      </tr>
+  <thead>
+    <tr>
+      <th>Titulo</th>
+      <th>Conteudo</th>
+      <th>Data</th>
+      <th>Link do Post</th>
+      <% if (req.session.adm) { %> 
+      <th>Exluir Post</th>
       <% } %>
-    </tbody>
-  </table>
+    </tr>
+  </thead>
+  <tbody>
+    <% let qtd_posts = pag*5 %>
+
+    <%- console.log(JSON.stringify(qtd_posts)); %>
+    <%- console.log(JSON.stringify(dados.length)); %>
+
+    <!-- SE EXISTIREM MAIS DE 5 POSTS -->
+    <% if (dados.length > 5) { %> 
+      <% let i = qtd_posts-5; for (i = qtd_posts-5 ; i< qtd_posts; i++) {%>
+        <% if (i < dados.length) {%>
+        <tr>
+          <td><%= dados[i].title %></td>
+          <td><%= dados[i].content %></td>
+          <td><%= dados[i].data_criacao %></td>
+          <td><a href=/postCompleto/<%=dados[i].id%>>Post Completo</a></td>
+          <% if (req.session.adm) { %> 
+            <td><a href="/removerpost/<%= dados[i].id%>" onclick="return confirm('Tem Certeza Que Deseja Excluir o Post?')">Remover Post</a></td>
+        <% } %>
+          <% } %>
+        </tr>
+        </tbody>
+        <% } %>
+    <tfoot>
+      <tr>
+        <% if (req.session.adm) { %> 
+        <td colspan="5">
+        <%} else  {%>
+          <td colspan="4">
+        <% } %>
+          <% if (pag > 1) {%>
+          <a href="/posts/<%= Number(pag) - 1 %>"> <-- </a>
+          <% } %>
+          <% if (qtd_posts < dados.length) {%>
+          <a href="/posts/<%= Number(pag) + 1  %>"> --> </a>
+          <% } %>
+        </td>
+      </tr>
+    </tfoot>
+    <!-- SE EXISTIREM 5 POSTS OU MENOS -->
+  <% } else {%>
+  <% let i = 0; for (i = 0; i< dados.length; i++) {%>
+  <tr>
+    <td><%= dados[i].title %></td>
+    <td><%= dados[i].content %></td>
+    <td><%= dados[i].data_criacao %></td>
+    <td><a href=/postCompleto/<%=dados[i].id%>>Post Completo</a></td>
+    <% if (req.session.adm) { %> 
+      <td><a href="/removerpost/<%= dados[i].id%>" onclick="return confirm('Tem Certeza Que Deseja Excluir o Post?')">Remover Post</a></td>
+  <% } %>
+  </tr>
+  </tbody>
+  <% } %>
+  <tfoot>
+  <% } %>
+</table>
