@@ -1,43 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> <!-- Define o idioma principal da página como inglês -->
 
-<%- include("../partials/head") %>
+<%- include("../partials/head") %> 
+<!-- Inclui o conteúdo do arquivo 'head.ejs', que normalmente contém as meta tags -->
 
 <body>
     <br>
-    <center>
-        <h1 id="h1Login">CADASTRAR</h1>
-        <main>
-            <form action="/cadastro" method="post" class="formItens">
-        <table id="tblLogin">
-            <tr>
-                <td>
-                    Login:
-                </td>
-                <td>
-                    <input type="text" name="username" id="username" placeholder="Digite seu nome de usuário" required>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    Senha:
-                </td>
-                <td>
-                    <input type="password" name="password" id="password" placeholder="Digite sua senha" required>
-                </td>
-            </tr>
-        </table>
+    <center> <!-- Centraliza o conteúdo dentro da tag -->
+        <h1 id="h1Login">CADASTRAR</h1> <!-- Título da página de cadastro -->
 
-        <br>
-        <br>
-        <button type="submit" id="btnCadastrar">CADASTRAR</button>
+        <main> <!-- Elemento principal do conteúdo da página -->
+            <!-- Formulário que envia os dados para a rota /cadastro usando o método POST -->
+            <form action="/cadastro" method="post" class="formItens">
+
+                <!-- Tabela usada para organizar os campos de entrada do formulário -->
+                <table id="tblLogin">
+                    <tr>
+                        <td>Login:</td> <!-- Rótulo para o campo de login -->
+                        <td>
+                            <input type="text" name="username" id="username" 
+                                   placeholder="Digite seu nome de usuário" required>
+                            <!-- Campo de entrada de texto para o nome de usuário -->
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Senha:</td> <!-- Rótulo para o campo de senha -->
+                        <td>
+                            <input type="password" name="password" id="password" 
+                                   placeholder="Digite sua senha" required>
+                            <!-- Campo de entrada para a senha (oculta os caracteres digitados) -->
+                        </td>
+                    </tr>
+                </table>
+
+                <br><br>
+
+                <!-- Botão que envia o formulário -->
+                <button type="submit" id="btnCadastrar">CADASTRAR</button>
             </form>
         </main>
     </center>
+
     <br><br>
-    <h2><a id="VoltarLogin" href="./login">Voltar ao Login</a></h2>
+
+    <!-- Link para voltar à página de login -->
+    <h2>
+        <a id="VoltarLogin" href="./login">Voltar ao Login</a>
+    </h2>
 
     <%- include("../partials/footer") %>
+    <!-- Inclui o conteúdo do rodapé (footer), -->
 </body>
 
 </html>

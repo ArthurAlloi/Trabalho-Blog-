@@ -1,15 +1,32 @@
-<html lang="en">
+<html lang="en"> 
+<!-- Define o idioma da página como inglês. -->
 
-<%- include("../partials/head") %>
+<%- include("../partials/head") %> 
+<!-- Inclui o conteúdo do arquivo parcial 'head.ejs' -->
+
 
 <body>
     <br>
-    <center><h1>NOME DE USUARIO JA CADASTRADO</h1>
+
+    <center>
+        <h1>NOME DE USUÁRIO JÁ CADASTRADO</h1>
+        <!-- Mensagem informando que o nome de usuário inserido já existe no sistema -->
+
         <br>
-        <a href="/login"><h2>Ir para a Página de Login</h2></a>
-        <a href="/cadastro"><h2>Fazer Cadastro</h2></a>
+
+        <a href="/login">
+            <h2>Ir para a Página de Login</h2>
+        </a>
+        <!-- Link para redirecionar o usuário à página de login -->
+
+        <a href="/cadastro">
+            <h2>Fazer Cadastro</h2>
+        </a>
+        <!-- Link para redirecionar o usuário novamente à página de cadastro -->
     </center>
-    <%- include("../partials/footer") %>
+
+    <%- include("../partials/footer") %> 
+    <!-- Inclui o rodapé padrão da aplicação -->
 </body>
 
 </html>

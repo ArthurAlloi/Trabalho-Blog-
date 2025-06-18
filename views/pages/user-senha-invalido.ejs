@@ -1,15 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> <!-- Define o idioma da página como inglês -->
 
-<%- include("../partials/head") %>
+<%- include("../partials/head") %> 
+<!-- Inclui o conteúdo do arquivo parcial 'head.ejs' -->
 
 <body>
-     <br>
-    <center><h1>USUARIO OU SENHA INVALIDOS</h1>
+
     <br>
-    <a href="/login"><h2>Ir para a Página de Login</h2></a>
+
+    <!-- Centraliza o conteúdo da página com a tag <center> -->
+    <center>
+        <h1>USUÁRIO OU SENHA INVÁLIDOS</h1> 
+        <!-- Mensagem de erro exibida quando o login falha -->
+
+        <br>
+
+        <a href="/login">
+            <h2>Ir para a Página de Login</h2>
+        </a>
+        <!-- Link que redireciona o usuário de volta para a tela de login -->
     </center>
+
     <%- include("../partials/footer") %>
+    <!-- Inclui o rodapé padrão do site com informações gerais ou copyright -->
+
 </body>
 
 </html>

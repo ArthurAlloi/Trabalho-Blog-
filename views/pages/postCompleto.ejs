@@ -1,27 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> <!-- Define o idioma da página como inglês -->
 
 <%- include("../partials/head") %>
+<!-- Inclui o conteúdo do arquivo 'head.ejs'-->
 
 <body>
+
     <%- include("../partials/menu") %>
+    <!-- Inclui o menu de navegação principal da aplicação -->
+
     <br><br>
-    <a href="/posts"><img src="../../static/voltar.png" width="40px"/ style="margin: 10px;"></a>
+
+    <!-- Botão de "voltar" representado por uma imagem com link para a listagem de posts -->
+    <a href="/posts">
+        <img src="../../static/voltar.png" width="40px" style="margin: 10px;">
+        <!-- Ícone de voltar com margem -->
+    </a>
+
     <br><br>
-    <center>
-    <div>
-        <%- console.log(JSON.stringify(dados)); %>
-        ID USUARIO: <%= dados[0].id_user %>
-        <br>
-        <h1><%= dados[0].title %></h1>
-        <br>
-        <label><%= dados[0].content %></label>
-        <br>
-        <br>
-        <label>Data: <%= dados[0].data_criacao %></label>
-    </div>
+
+    <center> <!-- Centraliza visualmente o conteúdo -->
+        <div>
+            <!-- Linha abaixo imprime os dados no terminal do servidor -->
+            <%- console.log(JSON.stringify(dados)); %>
+
+            <!-- Exibe o ID do usuário que fez a postagem -->
+            ID USUARIO: <%= dados[0].id_user %>
+
+            <br>
+
+            <!-- Título da postagem -->
+            <h1><%= dados[0].title %></h1>
+
+            <br>
+
+            <!-- Conteúdo da postagem -->
+            <label><%= dados[0].content %></label>
+
+            <br><br>
+
+            <!-- Data de criação da postagem -->
+            <label>Data: <%= dados[0].data_criacao %></label>
+        </div>
     </center>
+
     <%- include("../partials/footer") %>
+    <!-- Inclui o rodapé da aplicação -->
+
 </body>
 
 </html>

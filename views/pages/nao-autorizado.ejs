@@ -1,16 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> <!-- Define o idioma principal do conteúdo como inglês -->
 
-<%- include("../partials/head") %>
+<%- include("../partials/head") %> 
+<!-- Inclui o conteúdo do arquivo parcial 'head.ejs', -->
 
 <body>
     <br>
-    <center><h1>USUARIO NÃO TEM PERMISSÃO PARA ENTRAR NESTA PÁGINA</h1>
-    <br>
-    <a href="/"><h2>Ir para a Página Inicial</h2></a>
-    <a href="/login"><h2>Fazer Login</h2></a>
-</center>
-    <%- include("../partials/footer") %>
+
+    <!-- Conteúdo centralizado -->
+    <center>
+        <!-- Mensagem principal de aviso sobre permissão de acesso -->
+        <h1>USUÁRIO NÃO TEM PERMISSÃO PARA ENTRAR NESTA PÁGINA</h1>
+
+        <br>
+
+        <!-- Link para redirecionar o usuário à página inicial -->
+        <a href="/"><h2>Ir para a Página Inicial</h2></a>
+
+        <!-- Link para redirecionar o usuário à página de login -->
+        <a href="/login"><h2>Fazer Login</h2></a>
+    </center>
+
+    <%- include("../partials/footer") %> 
+    <!-- Inclui o rodapé do site a partir de um arquivo parcial -->
 </body>
 
 </html>

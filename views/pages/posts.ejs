@@ -1,19 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> <!-- Define o idioma da página como inglês -->
 
-<%- include("../partials/head") %>
+<%- include("../partials/head") %> 
+<!-- Inclui o conteúdo do arquivo 'head.ejs' -->
 
 <body>
-    <%- include("../partials/menu") %>
+
+    <%- include("../partials/menu") %> 
+    <!-- Inclui o menu de navegação -->
+
     <br><br>
+
     <%- console.log(JSON.stringify(dados)); %>
-    <center>
-    <h1>POSTAGENS</h1>
-    <main id="MainDash">
-    <%- include("../partials/poststable"); %>
-    </main>
+    <!-- Comando do EJS para imprimir os dados recebidos no console do servidor (não aparece no navegador),
+         útil para depuração dos dados recebidos -->
+
+    <center> <!-- Centraliza o conteúdo da página  -->
+
+        <h1>POSTAGENS</h1> <!-- Título da página -->
+
+        <main id="MainDash"> 
+            <%- include("../partials/poststable"); %>
+            
+        </main>
+
     </center>
-    <%- include("../partials/footer") %>
+
+    <%- include("../partials/footer") %> 
+    <!-- Inclui o rodapé do site -->
+
 </body>
 
 </html>

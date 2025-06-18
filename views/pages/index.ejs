@@ -1,18 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> <!-- Define o idioma principal da página como inglês -->
 
-<%- include("../partials/head") %>
+<%- include("../partials/head") %> 
+<!-- Inclui o conteúdo do arquivo parcial 'head.ejs' -->
 
 <body>
-    <%- include("../partials/menu") %>
+    <%- include("../partials/menu") %> 
+    <!-- Inclui o menu de navegação (navbar) a partir de um arquivo parcial -->
+
     <br><br>
-    <center>
-        <h1>Alô SESI Sumaré</h1>
-        <img src='/static/SenaiLogo.png' width='500px'>
+
+    <center> <!-- Centraliza o conteúdo da página -->
+        <h1>Alô SESI Sumaré</h1> <!-- Título de destaque na página -->
+        
+        <!-- Imagem com o logotipo do SENAI -->
+        <img src='/static/SenaiLogo.png' width='500px'> 
     </center>
+
     <br>
 
-    <%- include("../partials/footer") %>
+    <%- include("../partials/footer") %> 
+    <!-- Inclui o rodapé do site -->
 </body>
 
 </html>

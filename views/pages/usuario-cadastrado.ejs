@@ -1,14 +1,28 @@
-<html lang="en">
+<html lang="en"> <!-- Define o idioma da página como inglês -->
 
 <%- include("../partials/head") %>
+<!-- Inclui o conteúdo do arquivo parcial 'head.ejs' -->
 
 <body>
+
     <br>
-    <center><h1>USUARIO CADASTRADO COM SUCESSO</h1>
-    <br>
-    <a href="/login"><h2>Ir para o Login</h2></a>
-</center>
+
+    <!-- Centraliza o conteúdo da página  -->
+    <center>
+        <h1>USUÁRIO CADASTRADO COM SUCESSO</h1>
+        <!-- Mensagem principal indicando que o cadastro foi realizado com êxito -->
+
+        <br>
+
+        <a href="/login">
+            <h2>Ir para o Login</h2>
+        </a>
+        <!-- Link de navegação que leva o usuário para a página de login -->
+    </center>
+
     <%- include("../partials/footer") %>
+    <!-- Inclui o rodapé padrão do sistema -->
+
 </body>
 
 </html>

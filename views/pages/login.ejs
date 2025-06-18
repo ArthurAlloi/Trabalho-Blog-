@@ -1,44 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> <!-- Define o idioma da página como inglês -->
 
 <%- include("../partials/head") %>
+<!-- Inclui o conteúdo do arquivo parcial 'head.ejs' -->
 
 <body>
-    <a href="/"><img src="../../static/voltar.png" width="40px"/ style="margin: 10px;"></a>
+
+    <!-- Botão/ícone para voltar à página anterior ou página inicial -->
+    <a href="/">
+        <img src="../../static/voltar.png" width="40px" style="margin: 10px;">
+        <!-- Imagem de seta ou ícone de "voltar", com margem de 10px -->
+    </a>
+
     <br>
-    
-    <center>
-        <h1 id="h1Login">LOGIN</h1>
+
+    <center> <!-- Centraliza o conteúdo na tela -->
+
+        <h1 id="h1Login">LOGIN</h1> <!-- Título da página de login -->
+
         <main>
+            <!-- Formulário de login: envia os dados para a rota /login usando POST -->
             <form action="/login" method="post" class="formItens">
-        <table id="tblLogin">
-            <tr>
-                <td>
-                    Login:
-                </td>
-                <td>
-                    <input type="text" name="username" id="username" placeholder="Digite seu nome de usuário">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    Senha:
-                </td>
-                <td>
-                    <input type="password" name="password" id="password" placeholder="Digite sua senha">
-                </td>
-            </tr>
-        </table>
-        <br>
-        <br>
-        <button type="submit" id="btnEntrar">ENTRAR</button>
+
+                <!-- Tabela usada para organizar visualmente os campos do formulário -->
+                <table id="tblLogin">
+                    <tr>
+                        <td>Login:</td> <!-- Rótulo do campo de nome de usuário -->
+                        <td>
+                            <input type="text" name="username" id="username" 
+                                   placeholder="Digite seu nome de usuário">
+                            <!-- Campo de entrada do nome de usuário -->
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Senha:</td> <!-- Rótulo do campo de senha -->
+                        <td>
+                            <input type="password" name="password" id="password" 
+                                   placeholder="Digite sua senha">
+                            <!-- Campo de entrada da senha, com caracteres ocultos -->
+                        </td>
+                    </tr>
+                </table>
+
+                <br><br>
+
+                <!-- Botão que envia o formulário -->
+                <button type="submit" id="btnEntrar">ENTRAR</button>
             </form>
         </main>
     </center>
+
     <br><br>
-    <h2><a id="cadastrar" href="./cadastro">Não Tenho Login</a></h2>
+
+    <!-- Link para a página de cadastro, para usuários que ainda não possuem login -->
+    <h2>
+        <a id="cadastrar" href="./cadastro">Não Tenho Login</a>
+    </h2>
 
     <%- include("../partials/footer") %>
+    <!-- Inclui o rodapé da página -->
+
 </body>
 
 </html>

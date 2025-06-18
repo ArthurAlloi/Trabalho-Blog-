@@ -1,54 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> <!-- Define o idioma principal do conteúdo como inglês -->
 
-<%- include("../partials/head") %>
+<%- include("../partials/head") %> 
+<!-- Inclui o conteúdo do arquivo parcial 'head.ejs'
 
 <body>
-    <%- include("../partials/menu") %>
+    <%- include("../partials/menu") %> 
+    <!-- Inclui o menu de navegação da aplicação a partir de um arquivo parcial -->
+
     <br>
-    
-    <center>
-        <h1 id="h1Login">NOVA POSTAGEM</h1>
+
+    <center> <!-- Centraliza o conteúdo -->
+        <h1 id="h1Login">NOVA POSTAGEM</h1> <!-- Título principal da página -->
+
         <main>
+            <!-- Formulário que envia uma nova postagem para a rota "/novo-post" via método POST -->
             <form action="/novo-post" method="post" class="formItens">
-        <table id="tblPost">
-            <tr>
-                <td>
-                    Titulo:
-                </td>
-                <td>
-                    <input type="text" name="title" id=title" style="width: 400px;" placeholder="Digite o Titulo" required>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <br>
-                </td>
-                <td>
-                    <br>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    Conteúdo:
-                </td>
-                <td><br></td>
-            </tr>
-            <tr>
-                <td><br></td>
-                <td>
-                    <textarea name="content" id="content" placeholder="Digite o conteudo da Postagem" rows="6" cols="45" required></textarea>
-                </td>
-            </tr>
-        </table>
-        <br>
-        <br>
-        <button type="submit" id="btnPost">POSTAR</button>
+
+                <!-- Tabela usada para organizar visualmente os campos do formulário -->
+                <table id="tblPost">
+                    <tr>
+                        <td>Titulo:</td> <!-- Rótulo do campo de título -->
+                        <td>
+                            <input 
+                                type="text" 
+                                name="title" 
+                                id="title" <!-- OBS: estava com erro de aspas: id=title" -->
+                                style="width: 400px;" 
+                                placeholder="Digite o Título" 
+                                required>
+                            <!-- Campo de entrada de texto para o título da postagem -->
+                        </td>
+                    </tr>
+
+                  
+                    <tr>
+                        <td><br></td>
+                        <td><br></td>
+                    </tr>
+
+                    <tr>
+                        <td>Conteúdo:</td> <!-- Rótulo para o conteúdo da postagem -->
+                        <td><br></td> 
+                    </tr>
+
+                    <tr>
+                        <td><br></td>
+                        <td>
+                            <textarea 
+                                name="content" 
+                                id="content" 
+                                placeholder="Digite o conteúdo da Postagem" 
+                                rows="6" 
+                                cols="45" 
+                                required></textarea>
+                            <!-- Campo de texto para digitação do conteúdo da postagem -->
+                        </td>
+                    </tr>
+                </table>
+
+                <br><br>
+
+                <!-- Botão que envia o formulário -->
+                <button type="submit" id="btnPost">POSTAR</button>
             </form>
         </main>
     </center>
 
-    <%- include("../partials/footer") %>
+    <%- include("../partials/footer") %> 
+    <!-- Inclui o rodapé do site -->
 </body>
 
 </html>

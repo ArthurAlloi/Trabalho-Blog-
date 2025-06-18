@@ -1,18 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> <!-- Define o idioma principal do documento como inglês -->
 
-<%- include("../partials/head") %>
+<%- include("../partials/head") %> 
+<!-- Inclui o conteúdo do arquivo parcial 'head.ejs' -->
 
 <body>
-    <%- include("../partials/menu") %>
+    <%- include("../partials/menu") %> 
+    <!-- Inclui o menu de navegação a partir de um arquivo parcial -->
+
     <br>
-    <center>
-        <h1>DASHBOARD</h1>
-        <main id="MainDash">
-        <%- include("../partials/usertable") %>
+
+    <center> <!-- Centraliza o conteúdo na tela -->
+        <h1>DASHBOARD</h1> <!-- Título principal da página de dashboard -->
+
+        <main id="MainDash"> 
+        <!-- Container principal para o conteúdo da dashboard -->
+
+            <%- include("../partials/usertable") %> 
+            <!-- Inclui uma tabela de usuários -->
         </main>
     </center>
-    <%- include("../partials/footer") %>
+
+    <%- include("../partials/footer") %> 
+    <!-- Inclui o rodapé da página -->
+
 </body>
 
 </html>

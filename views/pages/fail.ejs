@@ -1,28 +1,31 @@
 <!DOCTYPE html>
-<html lang="ptbr">
+<html lang="ptbr"> <!-- Define o idioma do documento como português brasileiro -->
 
 <head>
     <%- include('../partials/head'); %>
+    <!-- Inclui o conteúdo do arquivo parcial 'head.ejs' -->
 </head>
 
-<body class="container">
+<body class="container"> <!-- Início do corpo da página com a classe 'container' -->
 
     <header>
-        <%- include('../partials/menu'); %>      
+        <%- include('../partials/menu'); %> 
+        <!-- Inclui o menu de navegação da aplicação a partir de um arquivo parcial -->
     </header>
 
     <main>
         <div>
-            <center>
-            <br><br>
-            <h1>Página não encontrada</h1>
-            <br>
-            <img src="/static/404.png">
-        </center>
+            <center> <!-- Centraliza o conteúdo -->
+                <br><br>
+                <h1>Página não encontrada</h1> <!-- Mensagem de erro (404) para o usuário -->
+                <br>
+                <img src="/static/404.png"> <!-- Imagem que representa o erro 404 (página não encontrada) -->
+            </center>
         </div>
     </main>
 
+
     <footer>
-        <%- include('../partials/footer'); %>
+        <%- include('../partials/footer'); %> <!-- Inclui o rodapé da página -->
     </footer>
 </body>

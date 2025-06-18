@@ -1,87 +1,105 @@
+/* Define a fonte padrão para todos os elementos da página */
 * {
     font-family: Arial;
-
 }
 
+/* Remove a margem padrão do corpo da página */
 body {
     margin: 0;
 }
 
+/* Estiliza o cabeçalho (header) */
 header {
-    background-color: red;
-    padding: 8px;
-    color: white;
-    max-width: 100%;
-    text-align: end;
+    background-color: red;      /* Cor de fundo vermelha */
+    padding: 8px;                 /* Espaçamento interno */
+    color: white;               /* Cor do texto */
+    max-width: 100%;              /* Largura máxima total */
+    text-align: end;              /* Alinha o texto à direita */
 }
 
+/* Centraliza o conteúdo da navegação */
 nav {
     text-align: center;
 }
 
+/* Remove os estilos padrão da lista */
 nav ul {
     list-style: none;
     padding: 0;
 }
 
+/* Estiliza os itens da lista de navegação */
 nav ul li {
-    display: inline;
-    margin: 0 35px;
+    display: inline;             /* Exibe os itens na mesma linha */
+    margin: 0 35px;              /* Espaçamento lateral entre os itens */
 }
 
+/* Estilo dos links dentro do header */
 header a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
-    margin-right: 10px;
+    color: #ffffff;            /* Cor do link */
+    text-decoration: none;       /* Remove sublinhado */
+    font-weight: bold;           /* Texto em negrito */
+    transition: color 0.3s;      /* Transição suave da cor */
+    margin-right: 10px;          /* Espaçamento à direita */
 }
 
+/* Cor ao passar o mouse sobre os links */
 header a:hover {
     color: #ffd700;
 }
 
-#h1Login{
+/* Estilo do título com ID h1Login */
+#h1Login {
     font-size: 40px;
 }
 
-input{
+/* Estilo para todos os campos de entrada */
+input {
     font-size: 17px;
-    color: #0d0d8077;
+    color: #0d0d8077; /* Cor com transparência */
 }
 
+/* Estilização da tabela de login */
 #tblLogin {
     border-style: none;
 }
 
-#tblLogin td{
+/* Estilo para células da tabela de login */
+#tblLogin td {
     font-size: 18px;
     font-weight: bolder;
 }
 
-#tblLogin tr td{
+/* Alinhamento e espaçamento das células */
+#tblLogin tr td {
     text-align: end;
     padding-left: 10px;
 }
 
-textarea{
+/* Estilo para área de texto */
+textarea {
     font-size: 17px;
     color: #0d0d8077;
 }
 
+/* Estilização da tabela de postagens */
 #tblPost {
     border-style: none;
 }
 
-#tblPost td{
+/* Estilo para células da tabela de postagens */
+#tblPost td {
     font-size: 18px;
     font-weight: bolder;
     text-align: start;
 }
 
-#tblPost tr td{
+/* Espaçamento à esquerda das células */
+#tblPost tr td {
     padding-left: 10px;
 }
+
+/* Estilização do rodapé */
 footer {
     text-align: center;
     background-color: red;
@@ -89,31 +107,35 @@ footer {
     padding: 5px 0;
     width: 100%;
     bottom: 0;
-    position: fixed;
-    text-align: center;
+    position: fixed; /* Fixa o rodapé no final da tela */
 }
 
-#cadastrar{
+/* Estilo para o botão "cadastrar" */
+#cadastrar {
     padding: 10px;
     font-size: 14px;
 }
 
-#VoltarLogin{
+/* Estilo para o botão "Voltar ao Login" */
+#VoltarLogin {
     padding: 10px;
-    font-size: 14px; 
+    font-size: 14px;
 }
 
-#MainDash *{
-    border: 1px solid;
+/* Estilização do conteúdo principal do dashboard */
+#MainDash * {
+    border: 1px solid; /* Adiciona borda a todos os elementos dentro de #MainDash */
     width: 900px;
 }
 
-#MainDash table{
+/* Estilo da tabela dentro do dashboard */
+#MainDash table {
     text-align: center;
     border: 3px solid;
 }
 
-button{ 
+/* Estilo padrão para todos os botões */
+button {
     border: none;
     padding: 15px;
     font-size: 12px;
@@ -123,13 +145,15 @@ button{
     border-radius: 5px;
 }
 
+/* Estilo do botão ao passar o mouse */
 button:hover {
     cursor: pointer;
     background-color: rgb(182, 6, 6);
 }
 
-#text{
+/* Estilo para o texto principal */
+#text {
     text-align: justify;
     margin: 30px;
-    line-height: 25px;
+    line-height: 25px; /* Espaçamento entre as linhas do texto */
 }

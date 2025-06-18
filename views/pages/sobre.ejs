@@ -1,20 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> <!-- Define o idioma principal da página como inglês -->
 
 <%- include("../partials/head") %>
-
+<!-- Inclui o conteúdo do arquivo 'head.ejs' -->
 <body>
+
     <%- include("../partials/menu") %>
+    <!-- Inclui o menu de navegação principal -->
+
     <br>
+
+    <!-- Centraliza o conteúdo -->
     <center>
-        <h1>Sobre o SENAI</h1>
+        <h1>Sobre o SENAI</h1> <!-- Título principal da página -->
         <img src='/static/SenaiLogo.png' width='500px'>
+        <!-- Imagem do logotipo do SENAI com largura de 500px -->
     </center>
+
+    <!-- Div com o id="text", que provavelmente tem estilo associado no CSS -->
     <div id="text">
+        <!-- Texto institucional sobre o SENAI -->
         O Serviço Nacional de Aprendizagem Industrial (SENAI) criado sob o Decreto-Lei nº 4.048, em 22 de janeiro de 1942, tem como objetivo realizar a aprendizagem industrial contribuindo para a formação dos trabalhadores da indústria. Suas iniciativas buscam o aperfeiçoamento e especialização para trabalhadores industriários, elaborando programas educacionais e ações para o desenvolvimento de pesquisas tecnológicas sob o interesse da indústria. Sendo uma entidade de direito privado e organizada e dirigida pela Confederação Nacional da Indústria (CNI), o SENAI é o maior complexo de Educação Profissional da América Latina, oferecendo serviços de qualidade, contribuindo para o desenvolvimento pleno e sustentável do país. Presente em todos os estados, a instituição possui papel relevante na elevação da produtividade e competitividade da indústria brasileira.
     </div>
+
 </body>
 
 <%- include("../partials/footer") %>
+<!-- Inclui o rodapé do site -->
 
 </html>
